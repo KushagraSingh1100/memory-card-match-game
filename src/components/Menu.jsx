@@ -62,7 +62,7 @@ function Menu({ diff, setDiff, theme, setTheme }) {
             Animals
           </button>
         </div>
-        <div className="rules">
+        <div className="rules-btn">
           <Link to="/rules">Rules</Link>
         </div>
       </div>
