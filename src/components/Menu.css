@@ -1,0 +1,63 @@
+.menu-screen {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #ee9ca7, #ffdde1);
+    color: rgb(255, 0, 0);
+}
+
+.play-btn {
+    font-size: 1.5em;
+}
+
+.menu-screen h1 {
+    font-family: "Rubik Puddles", system-ui;
+    font-size: 3em;
+}
+
+.menu-options {
+    font-family: Poppins;
+    display: flex;
+    color: rgb(255, 49, 108);
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.5em;
+    padding: 1em;
+}
+
+.menu-options a {
+    all: unset;
+    
+    
+    &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+    }
+}
+
+.diff-btn {
+    margin-top: 0.5em;
+    gap: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.diff-btn button {
+    border-radius: 1em;
+    height: 4em;
+    width: 15em;
+}
+
+.selected {
+    background-color: rgb(255, 0, 128);
+}
+
+.rules{
+    margin-top: 0.5em;
+}
