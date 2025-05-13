@@ -7,7 +7,7 @@ function Card({ handleChoice, card, flipped }) {
   useEffect(() => {
     setTimeout(() => {
       setFlip(false);
-    }, 500);
+    }, 1000);
   }, []);
 
   const handleClick = () => {
