@@ -32,8 +32,8 @@
 
 .menu-options a {
     all: unset;
-    
-    
+
+
     &:hover {
         cursor: pointer;
         opacity: 0.6;
@@ -58,6 +58,47 @@
     background-color: rgb(255, 0, 128);
 }
 
-.rules{
+.rules {
     margin-top: 0.5em;
+}
+
+@media (max-width: 768px) {
+    .menu-screen h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .play-btn {
+        font-size: 1.2em;
+    }
+
+    .menu-options {
+        font-size: 1.2em;
+        padding: 0.5em;
+    }
+
+    .diff-btn button {
+        width: 12em;
+        height: 3em;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-screen h1 {
+        font-size: 1.6em;
+    }
+
+    .play-btn {
+        font-size: 1em;
+    }
+
+    .menu-options {
+        font-size: 1em;
+    }
+
+    .diff-btn button {
+        width: 10em;
+        height: 2.8em;
+    }
 }

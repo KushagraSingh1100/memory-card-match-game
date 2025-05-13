@@ -1,6 +1,7 @@
 .playing-board {
     min-height: 100vh;
     width: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,13 +22,14 @@
     font-size: 1.5em;
 }
 
-.cards{
+.cards {
     padding: 1em;
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+
     gap: 1em;
 }
-.score-board{
+
+.score-board {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +39,7 @@
     color: #fc4059;
 }
 
-.newgame-btn{
+.newgame-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,7 +48,7 @@
     font-family: Poppins;
 }
 
-.newgame-btn button{
+.newgame-btn button {
     margin-top: 1em;
     width: 10em;
     height: 3em;
@@ -54,8 +56,67 @@
     color: white;
     background-color: #fc4059;
 
-    &:hover{
+    &:hover {
         cursor: pointer;
         opacity: 0.7;
+    }
+}
+
+.react-confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+@media (max-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8em;
+    }
+
+    .score-board {
+        flex-direction: column;
+        gap: 1em;
+        font-size: 1.2em;
+    }
+
+    .newgame-btn button {
+        width: 9em;
+        height: 2.8em;
+    }
+
+    .game-heading {
+        font-size: 1.2em;
+        text-align: center;
+        padding: 0.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5em;
+    }
+
+    .score-board {
+        font-size: 1em;
+    }
+
+    .newgame-btn button {
+        width: 8em;
+        height: 2.5em;
+    }
+
+    .game-heading {
+        font-size: 1em;
     }
 }

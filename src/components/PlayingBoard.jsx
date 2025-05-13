@@ -39,7 +39,8 @@ import turtle from "../assets/animals/turtle.png";
 import { useEffect, useState } from "react";
 import ReactConfetti from "react-confetti";
 
-function PlayingBoard({ theme }) {
+function PlayingBoard({ theme, difficulty }) {
+  const [totalPairs, setTotalPairs] = useState(10);
   const matchAudio = new Audio(matchSound);
   const victoryAudio = new Audio(victory);
   const flip = new Audio(flipSound);
@@ -52,6 +53,35 @@ function PlayingBoard({ theme }) {
   const [Choice2, setChoice2] = useState(null);
   const [sec, setSec] = useState(0);
   const [timerActive, setTimerActive] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const getGridStyle = () => {
+    if (windowWidth <= 768) {
+      if (difficulty === "Easy")
+        return { display: "grid", gridTemplateColumns: "auto auto" };
+      if (difficulty === "Medium")
+        return { display: "grid", gridTemplateColumns: "auto auto auto auto" };
+      if (difficulty === "Hard")
+        return { display: "grid", gridTemplateColumns: "auto auto auto auto" };
+    }
+    if (windowWidth <= 1024) {
+      if (difficulty === "Easy")
+        return { display: "grid", gridTemplateColumns: "auto auto" };
+      if (difficulty === "Medium")
+        return { display: "grid", gridTemplateColumns: "auto auto auto auto" };
+      if (difficulty === "Hard")
+        return { display: "grid", gridTemplateColumns: "auto auto auto auto" };
+    }
+    if (difficulty === "Easy")
+      return { display: "grid", gridTemplateColumns: "auto auto auto" };
+    if (difficulty === "Medium")
+      return { display: "grid", gridTemplateColumns: "auto auto auto auto" };
+    if (difficulty === "Hard")
+      return {
+        display: "grid",
+        gridTemplateColumns: "auto auto auto auto auto",
+      };
+  };
 
   const fruitImages = [
     { src: apple, matched: false },
@@ -98,6 +128,12 @@ function PlayingBoard({ theme }) {
   };
 
   useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
     let timer;
 
     if (timerActive && !won) {
@@ -140,7 +176,7 @@ function PlayingBoard({ theme }) {
         }, 500);
       }
     }
-    if (matches === 10) {
+    if (matches === totalPairs) {
       setwon(true);
       if (score > parseInt(localStorage.getItem("highScore") || "0", 10)) {
         localStorage.setItem("highScore", score);
@@ -158,13 +194,26 @@ function PlayingBoard({ theme }) {
   };
 
   const shuffelCards = () => {
-    const shuffled = (
-      theme === "Fruits"
-        ? [...fruitImages, ...fruitImages]
-        : theme === "Tech"
-        ? [...techImages, ...techImages]
-        : [...animalsImages, ...animalsImages]
-    )
+    let images;
+    if (theme === "Fruits") {
+      images = fruitImages;
+    } else if (theme === "Tech") {
+      images = techImages;
+    } else {
+      images = animalsImages;
+    }
+
+    if (difficulty === "Easy") {
+      setTotalPairs(3);
+      images = images.slice(0, 3);
+    } else if (difficulty === "Medium") {
+      setTotalPairs(8);
+      images = images.slice(0, 8);
+    } else {
+      setTotalPairs(10);
+      images = images.slice(0, 10);
+    }
+    const shuffled = [...images, ...images]
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }));
     setCards(shuffled);
@@ -187,8 +236,8 @@ function PlayingBoard({ theme }) {
         <h3>Time: {sec} seconds</h3>
       </div>
       {!won ? (
-        <div className="cards">
-          {cards.length === 20 &&
+        <div className="cards" style={getGridStyle()}>
+          {(cards.length === 20 || cards.length === 16 || cards.length === 6) &&
             cards.map((card) => (
               <Card
                 key={card.id}

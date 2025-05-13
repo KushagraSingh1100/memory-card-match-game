@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Menu.css";
 function Menu({ diff, setDiff, theme, setTheme }) {
   return (
@@ -5,7 +6,7 @@ function Menu({ diff, setDiff, theme, setTheme }) {
       <h1>Matching Card Game</h1>
       <div className="menu-options">
         <div className="play-btn">
-          <a href="">Play</a>
+          <Link to="/game">Play</Link>
         </div>
         <div className="diff-btn">
           <h3>Select Difficulty</h3>
@@ -62,7 +63,7 @@ function Menu({ diff, setDiff, theme, setTheme }) {
           </button>
         </div>
         <div className="rules">
-          <a href="">Rules</a>
+          <Link to="/rules">Rules</Link>
         </div>
       </div>
     </div>
