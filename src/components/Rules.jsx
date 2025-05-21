@@ -11,7 +11,10 @@ function Rules() {
         name="og:description"
         content="Learn the rules of the Matching Card Game. Flip cards, match pairs, and test your memory!"
       />
-      <meta property="og:image" content="http://localhost:5173/rulesPage.png" />
+      <meta
+        property="og:image"
+        content="https://memory-card-match-game.vercel.app/rulesPage.png"
+      />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Matching Card Game - Rules" />
       <meta
@@ -20,7 +23,7 @@ function Rules() {
       />
       <meta
         name="twitter:image"
-        content="http://localhost:5173/rulesPage.png"
+        content="https://memory-card-match-game.vercel.app/rulesPage.png"
       />
       <div className="rules-page">
         <h1>Rules!!!</h1>

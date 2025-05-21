@@ -14,7 +14,10 @@ function Menu({ diff, setDiff, theme, setTheme }) {
 
 "
       />
-      <meta property="og:image" content="http://localhost:5173/menu.png" />
+      <meta
+        property="og:image"
+        content="https://memory-card-match-game.vercel.app/menu.png"
+      />
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:title"
@@ -27,7 +30,10 @@ function Menu({ diff, setDiff, theme, setTheme }) {
 
 "
       />
-      <meta name="twitter:image" content="http://localhost:5173/menu.png" />
+      <meta
+        name="twitter:image"
+        content="https://memory-card-match-game.vercel.app/menu.png"
+      />
       <h1>Matching Card Game</h1>
       <div className="menu-options">
         <div className="play-btn">
