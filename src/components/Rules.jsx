@@ -11,9 +11,14 @@ function Rules() {
         name="og:description"
         content="Learn the rules of the Matching Card Game. Flip cards, match pairs, and test your memory!"
       />
+      <meta name="og:title" content="Matching Card Game - Rules" />
+      <meta
+        property="og:url"
+        content="https://memory-card-match-game.pages.dev/rules"
+      />
       <meta
         property="og:image"
-        content="https://memory-card-match-game.vercel.app/rulesPage.png"
+        content="https://memory-card-match-game.pages.dev/rulesPage.png"
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Matching Card Game - Rules" />
@@ -23,9 +28,12 @@ function Rules() {
       />
       <meta
         name="twitter:image"
-        content="https://memory-card-match-game.vercel.app/rulesPage.png"
+        content="https://memory-card-match-game.pages.dev/rulesPage.png"
       />
-      <link rel="canonical" href="https://memory-card-match-game.vercel.app/rules" />
+      <link
+        rel="canonical"
+        href="https://memory-card-match-game.pages.dev/rules"
+      />
       <div className="rules-page">
         <h1>Rules!!!</h1>
         <div className="rules">

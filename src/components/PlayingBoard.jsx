@@ -239,9 +239,14 @@ function PlayingBoard({ theme, difficulty }) {
         content="Challenge your memory on the playing board! Flip cards, match pairs, and race against time to complete the game with the fewest moves.
 "
       />
+      <meta name="og:title" content="Card Game – Flip, Match & Win!" />
+      <meta
+        property="og:url"
+        content="https://memory-card-match-game.pages.dev/game"
+      />
       <meta
         property="og:image"
-        content="https://memory-card-match-game.vercel.app/playPage.png"
+        content="https://memory-card-match-game.pages.dev/playPage.png"
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta
@@ -255,9 +260,12 @@ function PlayingBoard({ theme, difficulty }) {
       />
       <meta
         name="twitter:image"
-        content="https://memory-card-match-game.vercel.app/playPage.png"
+        content="https://memory-card-match-game.pages.dev/playPage.png"
       />
-      <link rel="canonical" href="https://memory-card-match-game.vercel.app/game" />
+      <link
+        rel="canonical"
+        href="https://memory-card-match-game.pages.dev/game"
+      />
       <div className="game-heading">
         <h1>Matching Card Game</h1>
       </div>

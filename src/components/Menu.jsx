@@ -12,9 +12,14 @@ function Menu({ diff, setDiff, theme, setTheme }) {
         name="og:description"
         content="Welcome to the Matching Card Game! Choose to play, view rules, or track your progress from the main menu and get ready to challenge your memory."
       />
+      <meta name="og:title" content="Matching Card Game – Main Menu" />
+      <meta
+        property="og:url"
+        content="https://memory-card-match-game.pages.dev/"
+      />
       <meta
         property="og:image"
-        content="https://memory-card-match-game.vercel.app/menu.png"
+        content="https://memory-card-match-game.pages.dev/menu.png"
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta
@@ -30,9 +35,9 @@ function Menu({ diff, setDiff, theme, setTheme }) {
       />
       <meta
         name="twitter:image"
-        content="https://memory-card-match-game.vercel.app/menu.png"
+        content="https://memory-card-match-game.pages.dev/menu.png"
       />
-      <link rel="canonical" href="https://memory-card-match-game.vercel.app/" />
+      <link rel="canonical" href="https://memory-card-match-game.pages.dev/" />
       <h1>Matching Card Game</h1>
       <div className="menu-options">
         <div className="play-btn">
