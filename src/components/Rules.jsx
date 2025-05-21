@@ -25,6 +25,7 @@ function Rules() {
         name="twitter:image"
         content="https://memory-card-match-game.vercel.app/rulesPage.png"
       />
+      <link rel="canonical" href="https://memory-card-match-game.vercel.app/rules" />
       <div className="rules-page">
         <h1>Rules!!!</h1>
         <div className="rules">

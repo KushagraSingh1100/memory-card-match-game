@@ -10,9 +10,7 @@ function Menu({ diff, setDiff, theme, setTheme }) {
       />
       <meta
         name="og:description"
-        content="Welcome to the Matching Card Game! Choose to play, view rules, or track your progress from the main menu and get ready to challenge your memory.
-
-"
+        content="Welcome to the Matching Card Game! Choose to play, view rules, or track your progress from the main menu and get ready to challenge your memory."
       />
       <meta
         property="og:image"
@@ -34,6 +32,7 @@ function Menu({ diff, setDiff, theme, setTheme }) {
         name="twitter:image"
         content="https://memory-card-match-game.vercel.app/menu.png"
       />
+      <link rel="canonical" href="https://memory-card-match-game.vercel.app/" />
       <h1>Matching Card Game</h1>
       <div className="menu-options">
         <div className="play-btn">

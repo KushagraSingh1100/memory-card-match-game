@@ -257,6 +257,7 @@ function PlayingBoard({ theme, difficulty }) {
         name="twitter:image"
         content="https://memory-card-match-game.vercel.app/playPage.png"
       />
+      <link rel="canonical" href="https://memory-card-match-game.vercel.app/game" />
       <div className="game-heading">
         <h1>Matching Card Game</h1>
       </div>
