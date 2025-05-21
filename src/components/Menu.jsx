@@ -3,6 +3,31 @@ import "./Menu.css";
 function Menu({ diff, setDiff, theme, setTheme }) {
   return (
     <div className="menu-screen">
+      <title>Matching Card Game – Main Menu</title>
+      <meta
+        name="description"
+        content="Welcome to the Matching Card Game! Choose to play, view rules, or track your progress from the main menu and get ready to challenge your memory."
+      />
+      <meta
+        name="og:description"
+        content="Welcome to the Matching Card Game! Choose to play, view rules, or track your progress from the main menu and get ready to challenge your memory.
+
+"
+      />
+      <meta property="og:image" content="http://localhost:5173/menu.png" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        name="twitter:title"
+        content="Matching Card Game – Main Menu
+"
+      />
+      <meta
+        name="twitter:description"
+        content="Welcome to the Matching Card Game! Choose to play, view rules, or track your progress from the main menu and get ready to challenge your memory.
+
+"
+      />
+      <meta name="twitter:image" content="http://localhost:5173/menu.png" />
       <h1>Matching Card Game</h1>
       <div className="menu-options">
         <div className="play-btn">

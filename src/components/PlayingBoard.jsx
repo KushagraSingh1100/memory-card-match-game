@@ -228,6 +228,29 @@ function PlayingBoard({ theme, difficulty }) {
 
   return (
     <div className="playing-board">
+      <title>Card Game – Flip, Match & Win!</title>
+      <meta
+        name="description"
+        content="Challenge your memory on the playing board! Flip cards, match pairs, and race against time to complete the game with the fewest moves.
+"
+      />
+      <meta
+        name="og:description"
+        content="Challenge your memory on the playing board! Flip cards, match pairs, and race against time to complete the game with the fewest moves.
+"
+      />
+      <meta property="og:image" content="http://localhost:5173/playPage.png" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        name="twitter:title"
+        content="Play Matching Card Game – Flip, Match & Win!"
+      />
+      <meta
+        name="twitter:description"
+        content="Challenge your memory on the playing board! Flip cards, match pairs, and race against time to complete the game with the fewest moves.
+"
+      />
+      <meta name="twitter:image" content="http://localhost:5173/playPage.png" />
       <div className="game-heading">
         <h1>Matching Card Game</h1>
       </div>
