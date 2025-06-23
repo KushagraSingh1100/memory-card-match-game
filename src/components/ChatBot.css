@@ -1,0 +1,121 @@
+.chat-bot {
+    font-family: Poppins;
+    background-color: white;
+    width: 25vw;
+    height: 70vh;
+    position: absolute;
+    right: 1.2%;
+    bottom: 3%;
+    border-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw;
+}
+
+.chat-bot-heading {
+    width: 100%;
+    margin-left: 2vw;
+    font-size: 0.7vw;
+}
+
+.chat-area {
+    background-color: antiquewhite;
+    width: 100%;
+    height: 87%;
+    border-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 3%;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.msg {
+    display: flex;
+    padding: 1vw;
+    height: max-content;
+    width: 70%;
+    gap: 1vw;
+    justify-content: start;
+    align-items: center;
+    border-radius: 10vw;
+    overflow: hidden;
+}
+
+.chat-text {
+    width: 80%;
+}
+
+.bot-chat {
+    margin-left: 3%;
+    background-color: pink;
+}
+
+.user-chat {
+    margin-left: 20%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    text-align: end;
+    background-color: rgb(255, 61, 93);
+}
+
+.pfp {
+    overflow: hidden;
+    width: 3.5vw;
+    height: 3vw;
+    border-radius: 100%;
+}
+
+.pfp img {
+    overflow: hidden;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100%;
+}
+
+.user-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw;
+    gap: 0.5vw;
+}
+
+.user-input input {
+    height: 2vw;
+    width: 80%;
+    border: 0;
+    padding: 0.5vw;
+    border-radius: 5vw;
+    border: 1px solid gray;
+
+    &:active {
+        border: 0;
+    }
+}
+
+.user-input button img {
+    height: 1.5vw;
+    margin-left: 0.3vw;
+}
+
+.user-input button {
+    border: 0;
+    cursor: pointer;
+    height: 2.5vw;
+    width: 2.5vw;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 107, 132);
+}
